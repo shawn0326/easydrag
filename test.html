@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Viewporter enabled</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="zepto-1.1.3.js"></script>
+	<script src="touch.js"></script>
+	<script src="easydrag.js"></script>
+
+	<style type="text/css">
+		.drag{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 100px;
+			top: 100px;
+			background-color: grey;
+			color: black;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="wrap">
+		<div class="drag">drag me ！</div>
+		<div class="drag">drag me ！</div>
+	</div>
+	
+</body>
+	<script type="text/javascript">
+		$('#wrap').easydrag('.drag',function(){
+			console.log('start drag!')
+		},function(){
+			console.log('drag end!')
+		})
+	</script>
+</html>
